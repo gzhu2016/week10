@@ -159,21 +159,7 @@ function drawCorRect(cxt,x,y,w,h,r,t)
 
 function drawMsgChat(cxt,msg,y,t)
 {
-    var msgL=cxt.measureText(msg).width;
-    var x;
-    var h;
-    var count = (msgL-9)/234>=parseInt(msgL/234)?parseInt(msgL/234)+1:parseInt(msgL/234);
-    h=24*count+16;
-    nexty+=(h+20);
-    if(t==true)
-    {
-        x=375-40-10-4-24-(msgL>234?234:msgL);
-    }
-    else
-    {
-        x=40+10+4;
-    }
-
+    //画头像
     cxt.beginPath();
     var Head=new Image();
     if(t==true){
@@ -187,6 +173,21 @@ function drawMsgChat(cxt,msg,y,t)
         Head.onload = function() {
             cxt.drawImage(Head, 6, y)
         }
+    }
+
+    var msgL=cxt.measureText(msg).width;
+    var x;
+    var h;
+    var count = (msgL-9)/234>=parseInt(msgL/234)?parseInt(msgL/234)+1:parseInt(msgL/234);
+    h=24*count+16;
+    nexty+=(h+20);
+    if(t==true)
+    {
+        x=375-40-10-4-24-(msgL>234?234:msgL);
+    }
+    else
+    {
+        x=40+10+4;
     }
 
     drawCorRect(cxt,x,y,(msgL>234?234:msgL)+24,h,5,t);
