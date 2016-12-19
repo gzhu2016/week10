@@ -113,7 +113,7 @@ function drawBackGround(cxt) {
  * @param  {[double]} r   [圆角矩形四角弧度的半径]
  * @return {[null]}
  */
-function drawChat(cxt,x,y,w,h,r,t)
+function drawCorRect(cxt,x,y,w,h,r,t)
 {
     cxt.beginPath();
     cxt.moveTo(x+r,y);//A
@@ -189,7 +189,7 @@ function drawMsgChat(cxt,msg,y,t)
         }
     }
 
-    drawChat(cxt,x,y,(msgL>234?234:msgL)+24,h,5,t);
+    drawCorRect(cxt,x,y,(msgL>234?234:msgL)+24,h,5,t);
 
     cxt.beginPath();
     //cxt.font="16px STHeitiSC-Light";
