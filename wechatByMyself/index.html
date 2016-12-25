@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--发现忘记这个网址？是什么鬼-->
+<html lang="zh" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    </meta>
+    <title>微信聊天界面生成器</title>
+    <style>
+        #canvas {
+            border: 1px solid #aaaaaa;
+            display: block;
+            margin: 50px auto;
+        }
+    </style>
+
+</head>
+<body>
+<div id="canvas-warp">
+    <canvas id="canvas">
+        你的浏览器不支持canvas哦，快下载最新的chrome浏览器吧！~
+    </canvas>
+</div>
+<!-- 为什么一定要class？-->
+<div class="ui action input">
+    <input id="name" placeholder="输入对方的昵称" tpye="text">
+    <button class="ui action" id="generate" onclick="generate(context)"> <!-- 为什么一定要class？-->
+        生成
+    </button>
+    </input>
+</div>
+
+<!-- 原本想cheatBox，发现自己没有把代码理解，checkbox是特有的type，导致有错误，两边都是框-->
+<div>
+    <input type="checkbox" id="chk1">
+    <select name="" id="select1">
+        <option value="">我</option>
+        <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt1">
+</div>
+<div>
+    <input type="checkbox" id="chk2">
+    <select name="" id="select2">
+        <option value="">我</option>
+        <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt2">
+</div>
+<div>
+    <input type="checkbox" id="chk3">
+    <select name="" id="select3">
+        <option value="">我</option>
+        <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt3">
+</div>
+<div>
+    <input type="checkbox" id="chk4">
+    <select name="" id="select4">
+        <option value="">我</option>
+        <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt4">
+</div>
+<div>
+    <input type="checkbox" id="chk5">
+    <select name="" id="select5">
+        <option value="">我</option>
+        <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt5">
+</div>
+<div>
+    <input type="checkbox" id="chk6">
+    <select name="" id="select6">
+        <option value="">我</option>
+        <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt6">
+</div>
+<div>
+    <input type="checkbox" id="chk7">
+    <select name="" id="select7">
+        <option value="">我</option>
+        <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt7">
+</div>
+
+<!--"..."是什么...    和下面的<%是什么-->
+<div class="myProfile" style="...">我的头像
+    <div id="preview1">
+        <img id="imgHead1" width="80" height="80" border="0" />
+    </div>
+    <input type="file" onChange="previewImage1(this)"/>
+    <!--这个作用 是 预览？-->
+</div>
+<div class="hisProfile" style="...">我的头像
+    <div id="preview2">
+        <img id="imgHead2" width="80" height="80" border="0" />
+    </div>
+    <input type="file" onChange="previewImage2(this)"/>
+    <!--这个作用 是 预览？-->
+</div>
+<script src="./js/demo.js"></script>
+<script src="./semantic.min.js"></script>
+<script src="./js/jquery-min.js"></script>
+<script src="js/loadImage.js"></script>
+<script src="js/PNG.js"></script>
+</body>
+</html>
