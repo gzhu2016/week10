@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>微信聊天页面生成器</title>
+    <style>
+        #canvas {
+            border: 1px solid #aaaaaa;
+            display: block;
+            margin: 50px auto;
+        }
+    </style>
+    <link href="js/semantic.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="canvas-warp">
+    <canvas id="canvas" width="375" height="667">
+        你的浏览器居然不支持Canvas？！赶快换一个吧！！
+    </canvas>
+</div>
+<div class="ui action input">
+    <input id="hisName" placeholder="对方的昵称" type="text">
+    <button class="ui button" id="generate" onclick="generate(context)">
+        生成
+    </button>
+</div>
+
+<div>
+    <input id="chk1" type="checkbox">
+    <select name id="select1">
+        <option value>我</option>
+        <option value>对方</option>
+    </select>
+    <input id="cnt1" type="text">
+</div>
+
+<div>
+    <input id="chk2" type="checkbox">
+    <select name id="select2">
+        <option value>我</option>
+        <option value>对方</option>
+    </select>
+    <input id="cnt2" type="text">
+</div>
+
+<div>
+    <input id="chk3" type="checkbox">
+    <select name id="select3">
+        <option value>我</option>
+        <option value>对方</option>
+    </select>
+    <input id="cnt3" type="text">
+</div>
+
+<div>
+    <input id="chk4" type="checkbox">
+    <select name id="select4">
+        <option value>我</option>
+        <option value>对方</option>
+    </select>
+    <input id="cnt4" type="text">
+</div>
+
+<div>
+    <input id="chk5" type="checkbox">
+    <select name id="select5">
+        <option value>我</option>
+        <option value>对方</option>
+    </select>
+    <input id="cnt5" type="text">
+</div>
+
+<div>
+    <input id="chk6" type="checkbox">
+    <select name id="select6">
+        <option value>我</option>
+        <option value>对方</option>
+    </select>
+    <input id="cnt6" type="text">
+</div>
+
+<div>
+    <input id="chk7" type="checkbox">
+    <select name id="select7">
+        <option value>我</option>
+        <option value>对方</option>
+    </select>
+    <input id="cnt7" type="text">
+</div>
+
+<div>
+    <input id="chk8" type="checkbox">
+    <select name id="select8">
+        <option value>我</option>
+        <option value>对方</option>
+    </select>
+    <input id="cnt8" type="text">
+</div>
+
+<div class="myProfile" style="float: left;">我的头像
+    <div id="preview1">
+        <img id="imgHead1" width="40" height="40" border="0" src="image/face1.jpg">
+    </div>
+    <input type="file" onchange="previewImage1(this)">
+</div>
+
+<div class="hisProfile" style="margin-right: 10px;">对方的头像
+    <div id="preview2">
+        <img id="imgHead2" width="40" height="40" border="0" src="image/face2.jpg">
+    </div>
+    <input type="file" onchange="previewImage2(this)">
+</div>
+
+<script src="js/demon.js">
+</script>
+<script src="js/semantic.min.js">
+</script>
+<script src="js/jquery-min.js"></script>
+<script src="js/loadImg.js"></script>
+<script src="js/PNG.js"></script>
+</body>
+</html>
