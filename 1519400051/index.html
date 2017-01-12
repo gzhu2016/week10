@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+<head>
+    <meta charset="UTF-8">
+    <title>微信聊天界面生成器</title>
+    <style>
+        .ui{
+            margin-left:  420px;
+        }
+        #canvas {
+            border: 1px solid #aaaaaa;
+            display: block;
+            margin: 50px auto;
+        }
+    </style>
+    <link href="./css/semantic.min.css" rel="stylesheet" type="text/css">
+    </link>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<div class="ui input" style="height: 50px">
+    <input id="hisName" placeholder="对方的昵称" type="text">
+    <button class="ui primary button" id="generate" onclick="generate(context)">一键生成</button>
+    <strong style="font-size: 20px">如无法加载背景图片，<br/>请刷新页面后重试，或按多几次一键生成。:-)</strong>
+</div>
+<script src="./javascript/semantic.min.js"></script>
+<script src="./javascript/canvas.js"></script>
+<script src="./javascript/jquery-min.js"></script>
+<script src="./javascript/loadImg.js"></script>
+<script src="./javascript/PNG.js"></script>
+<br/><br/><br/>
+<div class="ui input" style="display: block; height: 50px;">
+    <input class="ui toggle checkbox" type="checkbox" id="chk1"/>
+    <select name="" id="select1" style="height: 30px">
+    <option value="">我</option>
+    <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt1" style="height: 40px"/>
+</div>
+<div class="ui input" style="display: block; height: 50px;">
+    <input class="ui toggle checkbox" type="checkbox" id="chk2"/>
+    <select name="" id="select2" style="height: 30px">
+    <option value="">我</option>
+    <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt2"/>
+</div>
+<div class="ui input" style="display: block; height: 50px;">
+    <input class="ui toggle checkbox" type="checkbox" id="chk3"/>
+    <select name="" id="select3" style="height: 30px">
+    <option value="">我</option>
+    <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt3"/></div>
+<div class="ui input" style="display: block; height: 50px;">
+    <input class="ui toggle checkbox" type="checkbox" id="chk4"/>
+    <select name="" id="select4" style="height: 30px">
+    <option value="">我</option>
+    <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt4"/></div>
+<div class="ui input" style="display: block; height: 50px;">
+    <input class="ui toggle checkbox" type="checkbox" id="chk5"/>
+    <select name="" id="select5" style="height: 30px">
+    <option value="">我</option>
+    <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt5"/>
+</div>
+<div class="ui input" style="display: block; height: 50px;">
+    <input class="ui toggle checkbox" type="checkbox" id="chk6"/>
+    <select name="" id="select6" style="height: 30px">
+    <option value="">我</option>
+    <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt6"/></div>
+<div class="ui input" style="display: block; height: 50px;">
+    <input class="ui toggle checkbox" type="checkbox" id="chk7"/>
+    <select name="" id="select7" style="height: 30px">
+    <option value="">我</option>
+    <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt7"/>
+</div>
+<div class="ui input" style="display: block; height: 50px;">
+    <input class="ui toggle checkbox" type="checkbox" id="chk8"/>
+    <select name="" id="select8" style="height: 30px">
+        <option value="">我</option>
+        <option value="">对方</option>
+    </select>
+    <input type="text" id="cnt8"/>
+</div>
+<br/><br/>
+<div class = 'myProfile' style="float:left; margin-left: 420px"><strong>我的头像</strong>
+    <div id="preview1">
+        <img id="imgHead1" width="120" height="120" border=0 src="image/myHead.jpg" />
+    </div>
+    <input type="file" onChange="previewImage1(this)"/>
+</div>
+<div class="hisProfile" style="margin-right: 10px;"><strong>对方的头像</strong>
+    <div id="preview2">
+        <img id="imgHead2" width="120" height="120" border="0" src="./image/hisHead.jpg" />
+    </div>
+    <input type="file" onchange="previewImage2(this)"/>
+</div>
+<br/><br/><br/>
+
+</body>
+</html>
